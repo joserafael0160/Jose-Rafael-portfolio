@@ -1,50 +1,50 @@
 ---
+
+import Header from "../components/Header.astro"
 interface Props {
 	title: string;
 }
 
-const { title } = Astro.props;
+const { title } = Astro.props
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
 		<title>{title}</title>
+		<meta name="description" content="Welcome to José Rafael's Portfolio: A dedicated web developer with a passion for modern web technologies. Explore my work and feel free to get in touch." />
+		<meta name="keywords" content="porfolio, portafolio, porfolio, Portfolio, Jose Rafael, jose rafael, José Rafael, joserafael, web developer, Web Developer, web development" />
+	  <meta name="author" content="José Rafael" />
+	
+		<meta name="robots" content="index, follow" />
+		<link rel="canonical" href="https://joserafael.pages.dev" />
+
+		<link rel="icon" type="image/svg+xml" href="/assets/favicon/favicon.svg" />
 	</head>
 	<body>
+		<Header />
 		<slot />
 	</body>
-</html>
+</html> 
 
 <style is:global>
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		color-scheme: light dark;
 	}
+
 	html {
-		font-family: system-ui, sans-serif;
+		font-family:  system-ui, sans-serif;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
-	}
+
+	body {
+		background: #050505;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		height: 100vh;
+}
 </style>
