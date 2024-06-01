@@ -1,11 +1,14 @@
 ---
 
 import Header from "../components/Header.astro"
+import Footer from "../components/Footer.astro"
+
 interface Props {
 	title: string;
+	description: string;
 }
 
-const { title } = Astro.props
+const { description, title } = Astro.props
 ---
 
 <!doctype html>
@@ -16,8 +19,8 @@ const { title } = Astro.props
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		
 		<title>{title}</title>
-		<meta name="description" content="Welcome to José Rafael's Portfolio: A dedicated web developer with a passion for modern web technologies. Explore my work and feel free to get in touch." />
-		<meta name="keywords" content="porfolio, portafolio, porfolio, Portfolio, Jose Rafael, jose rafael, José Rafael, joserafael, web developer, Web Developer, web development" />
+		<meta name="description" content={description} />
+		<meta name="keywords" content="porfolio, portafolio, porfolio, Portfolio, Jose Rafael, jose rafael, José Rafael, joserafael, web developer, Web Developer, web development, programmer, Web programmer" />
 	  <meta name="author" content="José Rafael" />
 	
 		<meta name="robots" content="index, follow" />
@@ -29,6 +32,7 @@ const { title } = Astro.props
 		<div class="absolute top-0 z-[-2] h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]"></div>
 		<Header />
 		<slot />
+		<Footer />
 	</body>
 </html> 
 
@@ -39,6 +43,7 @@ const { title } = Astro.props
 
 	html {
 		font-family:  system-ui, sans-serif;
+		scroll-behavior: smooth;
 	}
 
 	body {
@@ -46,6 +51,11 @@ const { title } = Astro.props
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		height: 100vh;
-}
+		min-height: 100vh;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
 </style>
