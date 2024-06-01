@@ -1,12 +1,39 @@
 ---
+import HTMLIcon from "../assets/images/icons/HTMLIcon.astro"
+import PostCSSIcon from "../assets/images/icons/PostCSSIcon.astro"
+import JavaScriptIcon from "../assets/images/icons/JavaScriptIcon.astro"
+import ViteIcon from "../assets/images/icons/ViteIcon.astro"
+const TAGS = {
+  HTML: {
+    name: "HTML",
+    class: "bg-orange-900 text-white",
+    icon: HTMLIcon
+  },
+  POSTCSS: {
+    name: "PostCSS",
+    class: "bg-red-900 text-white",
+    icon: PostCSSIcon
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-yellow-800 text-white",
+    icon: JavaScriptIcon
+  },
+  VITE: {
+    name: "Vite",
+    class: "bg-blue-900 text-white",
+    icon: ViteIcon
+  }
+}
+
 const PROJECTS = [
   {
-    title: "Project 1",
-    description: "lrem ipsum kafljklafjkljdlkfjakjfklajfk  afkldjklajf ad",
-    link: "#",
-    github: "#",
-    image: "https://via.placeholder.com/300x200",
-    tags: ["HTML", "PostCss", "Javascript"]
+    title: "JRLinks",
+    description: "I have created this page with the intention of having all my links in one place. You can find me on all my platforms here. 💜",
+    link: "https://jrlinks.pages.dev/",
+    github: "https://github.com/joserafael0160/JRLinks",
+    image: "/assets/projects/jrlinks.webp",
+    tags: [TAGS.HTML, TAGS.POSTCSS, TAGS.JAVASCRIPT, TAGS.VITE]
   }
 ]
 ---
@@ -14,14 +41,20 @@ const PROJECTS = [
 {
   PROJECTS.map(({ image, title, description, tags}) => (
     <article>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <ul>
+      <h3 class="text-2xl font-semibold text-purple-600 mb-2">{title}</h3>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <ul class="flex gap-x-4 flex-row flex-wrap">
         {tags.map(tag => (
-          <li>{tag}</li>
+          <li>
+            <span class={`flex gap-x-2 rounded-full mb-2 text-xs ${tag.class} py-2 px-2`}> 
+              <tag.icon class="size-4"/>
+              {tag.name}
+            </span>
+          </li>
         ))}
       </ul>
-      <img src={image} alt={`Screenshot of the project ${image}`} />
+      <img  class="rounded shadow-2xl shadow-white/10"
+      src={image} alt={`Screenshot of the project ${title}`} />
     </article>
   ))
 }
