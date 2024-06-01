@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SectionContainer from "../components/SectionContainer.astro";
+import Projects from "../components/Projects.astro";
 import Badge from "../components/Badge.astro";
 import SocialPill from "../components/SocialPill.astro"
 import CodeIcon from "../assets/images/icons/CodeIcon.astro"
@@ -14,7 +15,7 @@ import MailIcon from "../assets/images/icons/MailIcon.astro"
 	description="Welcome to José Rafael's Portfolio: A dedicated web developer with a passion for modern web technologies. Explore my work and feel free to get in touch."
 >
 	<main class="px-4">
-		<SectionContainer class="py-44 pb-24 pt-14">
+		<SectionContainer class="pt-14">
 			<img class="rounded-full size-12 mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLYEcYn-Low2OurKr-6Dvgz164FPYpNiCDqg&s" alt="José Rafael">
   
 			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb:6 lg:pb-4">
@@ -41,11 +42,12 @@ import MailIcon from "../assets/images/icons/MailIcon.astro"
 			<nav/>
 		</SectionContainer>
 
-		<SectionContainer>
+		<SectionContainer class="pt-20">
 			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
 				<CodeIcon class="size-7" />
-				Proyects
+				Projects
 			</h2>
+			<Projects />
 		</SectionContainer>
 	</main>
 </Layout>
