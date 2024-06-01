@@ -1,9 +1,13 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import Badge from '../components/Badge.astro';
+import Layout from "../layouts/Layout.astro";
+import Badge from "../components/Badge.astro";
+import SocialPill from "../components/SocialPill.astro"
+import GithubIcon from "../assets/images/icons/GithubIcon.astro";
+import LinkedInIcon from "../assets/images/icons/LinkedInIcon.astro"
+import MailIcon from "../assets/images/icons/MailIcon.astro"
 ---
 
-<Layout title="José Rafael">
+<Layout title="José Rafael - Desarrollador y Programador Web">
 	<main>
 		<section class="w-full mx-auto lg:w-[740px] py-44">
 			<img class="rounded-full w-12 h-12 mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLYEcYn-Low2OurKr-6Dvgz164FPYpNiCDqg&s" alt="José Rafael">
@@ -12,15 +16,24 @@ import Badge from '../components/Badge.astro';
 				Hey, I'm José Rafael <a href="https://www.linkedin.com/in/joserafael016" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center"> <Badge>Available for work</Badge> </a>
 			</h1>
 			<h2 class="text-2xl text-wrap">
-				<strong class="text-purple-400">Web Developer</strong> <span class="opacity-85">from Cuba 🇨🇺</span>. <span>I'm passionate about learning 📚 and growing my skills</span>. I'm always <span class="text-pink-400">ready to tackle new problems</span> 🧩 and find efficient solutions.
+				<strong class="text-purple-500">Web Developer</strong> <span class="opacity-85">from Cuba 🇨🇺</span>. I'm passionate about learning 📚 and growing my skills. I'm always <span class="text-pink-400">ready to tackle new problems</span> 🧩 and find efficient solutions.
 			</h2>   
+			<nav class="flex gap-x-4 mt-5">
+				<SocialPill href="https://linkedin.com/in/joserafael0160">
+					<LinkedInIcon class="w-6 h-6 text-white" />
+							LinkedIn
+				</SocialPill>
 
-			<ul>
-				<li>
-					<a href="https://www.linkedin.com/in/joserafael016">LinkedIn</a>
-				</li>
-			</ul>
+				<SocialPill href="https://github.com/joserafael0160">
+					<GithubIcon class="w-6 h-6 text-white" />
+					Github
+				</SocialPill>
+				<SocialPill href="https://github.com/joserafael0160">
 
+					<MailIcon class="w-6 h-6" />
+					joserafaelperezr@icloud.com
+				</SocialPill>
+			<nav/>
 		</section>
 	</main>
 </Layout>
