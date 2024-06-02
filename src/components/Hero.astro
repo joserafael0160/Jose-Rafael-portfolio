@@ -1,0 +1,52 @@
+---
+import Badge from "./Badge.astro"
+import SocialPill from "./SocialPill.astro"
+import LinkedInIcon from "../assets/images/icons/LinkedInIcon.astro"
+import MailIcon from "../assets/images/icons/MailIcon.astro"
+import GitHubIcon from "../assets/images/icons/GithubIcon.astro"
+---
+
+<div class="max-w-xl">
+  <div class="flex gap-4 mb-4">
+    <img
+      class="rounded-full shadow-lg size-16 object-cover"
+      src="/JR.webp"
+      alt="José Rafael"
+    />
+    <a
+      href="https://www.linkedin.com/in/joserafael016"
+      target="_blank"
+      rel="noopener"
+      class="flex items-center transition md:justify-center md:hover:scale-105"
+    >
+      <Badge>Available for work</Badge>
+    </a>
+  </div>
+  <h1
+    class="text-4xl font-bold tracking-tight text-gray-800 sm:text-5xl dark:text-white"
+  >
+    Hey, I'm José Rafael 
+  </h1>
+  <p
+    class="mt-6 text-xl text-gray-800 [&>strong]:font-semibold dark:text-gray-100"
+  >
+    <strong class="text-purple-500">Web Developer</strong> <span class="opacity-85">from Cuba 🇨🇺</span>. I'm passionate about learning 📚 and growing my skills. I'm always <strong class="text-pink-400">ready to tackle new problems</strong> 🧩 and find efficient solutions.
+  </p>
+  <nav class="flex flex-wrap gap-4 mt-8">
+    <SocialPill href="mailto:joserafaelperezr@icloud.com">
+
+      <MailIcon class="size-4 md:size-6 dark:text-white text-black" />
+      joserafaelperezr@icloud.com
+    </SocialPill>
+    
+    <SocialPill href="https://linkedin.com/in/joserafael0160">
+      <LinkedInIcon class="size-4 md:size-6 dark:text-white text-black" />
+          LinkedIn
+    </SocialPill>
+
+    <SocialPill href="https://github.com/joserafael0160">
+			<GitHubIcon class="size-4 md:size-6 dark:text-white text-black" />
+			Github
+		</SocialPill>
+  </nav>
+</div>

@@ -1,13 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
+
+import Hero from "../components/Hero.astro"
 import SectionContainer from "../components/SectionContainer.astro";
 import Projects from "../components/Projects.astro";
-import Badge from "../components/Badge.astro";
-import SocialPill from "../components/SocialPill.astro"
 import CodeIcon from "../assets/images/icons/CodeIcon.astro"
-import GithubIcon from "../assets/images/icons/GithubIcon.astro";
-import LinkedInIcon from "../assets/images/icons/LinkedInIcon.astro"
-import MailIcon from "../assets/images/icons/MailIcon.astro"
+
 ---
 
 <Layout 
@@ -15,39 +13,20 @@ import MailIcon from "../assets/images/icons/MailIcon.astro"
 	description="Welcome to José Rafael's Portfolio: A dedicated web developer with a passion for modern web technologies. Explore my work and feel free to get in touch."
 >
 	<main class="px-4">
-		<SectionContainer class="pt-14">
-			<img class="rounded-full size-12 mb-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLYEcYn-Low2OurKr-6Dvgz164FPYpNiCDqg&s" alt="José Rafael">
-  
-			<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-bold flex flex-row gap-x-4 pb:6 lg:pb-4">
-				Hey, I'm José Rafael <a href="https://www.linkedin.com/in/joserafael016" target="_blank" rel="noopener noreferrer" class="flex justify-center items-center"> <Badge>Available for work</Badge> </a>
-			</h1>
-			<h2 class="text-xl lg:text-2xl text-wrap max-w-[700px]">
-				<strong class="text-purple-500">Web Developer</strong> <span class="opacity-85">from Cuba 🇨🇺</span>. I'm passionate about learning 📚 and growing my skills. I'm always <span class="text-pink-400">ready to tackle new problems</span> 🧩 and find efficient solutions.
-			</h2>   
-			<nav class="flex gap-4 mt-5 flex-wrap">
-				<SocialPill href="https://linkedin.com/in/joserafael0160">
-					<LinkedInIcon class="size-4 md:size-6 text-white" />
-							LinkedIn
-				</SocialPill>
-
-				<SocialPill href="https://github.com/joserafael0160">
-					<GithubIcon class="size-4 md:size-6 text-white" />
-					Github
-				</SocialPill>
-				<SocialPill href="mailto:joserafaelperezr@icloud.com">
-
-					<MailIcon class="size-4 md:size-6" />
-					joserafaelperezr@icloud.com
-				</SocialPill>
-			<nav/>
+		<SectionContainer class="py-16 md:py-36">
+			<Hero>
+				</slot>
+			</Hero>
 		</SectionContainer>
-
-		<SectionContainer class="pt-20">
-			<h2 class="text-2xl font-semibold mb-6 flex gap-x-3 items-center">
-				<CodeIcon class="size-7" />
-				Projects
-			</h2>
-			<Projects />
-		</SectionContainer>
+	
+		<SectionContainer id="projects">
+      <h2
+        class="flex items-center mb-6 text-3xl font-semibold gap-x-3 text-black/80 dark:text-white"
+      >
+        <CodeIcon class="size-7" />
+        Projects
+      </h2>
+      <Projects />
+    </SectionContainer>
 	</main>
 </Layout>
