@@ -1,0 +1,92 @@
+---
+import HTMLIcon from "../assets/images/icons/HTMLIcon.astro";
+import CSSIcon from "../assets/images/icons/CSSIcon.astro";
+import JavaScriptIcon from "../assets/images/icons/JavaScriptIcon.astro";
+import PostCSSIcon from "../assets/images/icons/PostCSSIcon.astro";
+import ViteIcon from "../assets/images/icons/ViteIcon.astro";
+import GitIcon from "../assets/images/icons/GitIcon.astro";
+import GithubIcon from "../assets/images/icons/GithubIcon.astro";
+
+interface Tech {
+  name: string;
+  logo: any;
+}
+
+
+const frontEnd: Tech[] = [
+  {
+    name: "HTML",
+    logo: HTMLIcon
+  },
+  {
+    name: "CSS",
+    logo: CSSIcon
+  },
+  {
+    name: "JavaScript",
+    logo: JavaScriptIcon
+  },
+  {
+    name: "PostCSS",
+    logo: PostCSSIcon
+  }
+]
+const backEnd: Tech[]  = [
+  {
+    name: "NodeJS",
+    logo: HTMLIcon
+  }
+  ]
+
+const tools: Tech[]  = [
+  {
+    name: "Git",
+    logo: GitIcon
+  },
+  {
+    name: "Github",
+    logo: GithubIcon
+  },
+  {
+    name: "Vite",
+    logo: ViteIcon
+  }
+]
+
+const learning: Tech[]  = [
+  {
+    name: "aa",
+    logo: HTMLIcon
+  }
+]
+
+const Tecnologies = [
+  { group: 'FrontEnd', techs: frontEnd },
+  { group: 'BackEnd', techs: backEnd },
+  { group: 'Tools', techs: tools },
+  { group: 'Learning', techs: learning },
+]
+
+---
+<div>
+  {
+    Tecnologies.map(({ group, techs }) => (
+      <article class="w-full md:w-1/2 md:max-w-lg mb-10">
+        <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2"
+        >
+          {group}
+        </h3>
+        <div class="grid grid-flow-col gap-x-3">
+          {
+            techs.map((tech) => (
+              <div class="flex flex-col ring-1 p-3 bg-slate-100  dark:bg-gray-900 ">
+                <tech.logo class="size-20 self-center"/>
+                <h4 class="text-lg text-center">{tech.name}</h4>
+              </div>
+            ))
+          }
+        </div>
+      </article>
+    ))
+  }
+</div>
