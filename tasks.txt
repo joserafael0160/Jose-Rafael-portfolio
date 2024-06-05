@@ -1,6 +1,1 @@
-put all my skills in skill section
-fix skill section grid
-
-add my languages
-
 add all my other projects
