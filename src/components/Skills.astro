@@ -6,7 +6,19 @@ import PostCSSIcon from "../assets/images/icons/PostCSSIcon.astro";
 import ViteIcon from "../assets/images/icons/ViteIcon.astro";
 import GitIcon from "../assets/images/icons/GitIcon.astro";
 import GithubIcon from "../assets/images/icons/GithubIcon.astro";
-
+import SassIcon from "../assets/images/icons/SassIcon.astro";
+import TailwindCSSIcon from "../assets/images/icons/TailwindCSSIcon.astro";
+import NPMIcon from "../assets/images/icons/NPMIcon.astro";
+import BunIcon from "../assets/images/icons/BunIcon.astro";
+import ReactIcon from "../assets/images/icons/ReactIcon.astro";
+import NodeJSIcon from "../assets/images/icons/NodeJSIcon.astro";
+import AstroIcon from "../assets/images/icons/AstroIcon.astro";
+import MySQLIcon from "../assets/images/icons/MySQLIcon.astro";
+import MongoDBIcon from "../assets/images/icons/MongoDBIcon.astro";
+import SpanishIcon from "../assets/images/icons/SpanishIcon.astro"
+import EnglishIcon from "../assets/images/icons/EnglishIcon.astro"
+import LinuxIcon from "../assets/images/icons/LinuxIcon.astro";
+import CPPIcon from "../assets/images/icons/CPPIcon.astro";
 interface Tech {
   name: string;
   logo: any;
@@ -27,14 +39,26 @@ const frontEnd: Tech[] = [
     logo: JavaScriptIcon
   },
   {
+    name: "Sass",
+    logo: SassIcon
+  },
+  {
     name: "PostCSS",
     logo: PostCSSIcon
+  },
+  {
+    name: "TailwindCSS",
+    logo: TailwindCSSIcon
+  },
+  {
+    name: "Astro",
+    logo: AstroIcon
   }
 ]
 const backEnd: Tech[]  = [
   {
     name: "NodeJS",
-    logo: HTMLIcon
+    logo: NodeJSIcon
   }
   ]
 
@@ -44,42 +68,77 @@ const tools: Tech[]  = [
     logo: GitIcon
   },
   {
-    name: "Github",
+    name: "GitHub",
     logo: GithubIcon
   },
   {
     name: "Vite",
     logo: ViteIcon
+  },
+  {
+    name: "NPM",
+    logo: NPMIcon
+  },
+  {
+    name: "Bun",
+    logo: BunIcon
   }
 ]
 
 const learning: Tech[]  = [
-  {
-    name: "aa",
-    logo: HTMLIcon
+{
+    name: "React",
+    logo: ReactIcon
+  },{
+    name: "MongoDB",
+    logo: MongoDBIcon
+  },{
+    name: "MySQL",
+    logo: MySQLIcon
   }
 ]
 
+const others: Tech[]  = [
+{
+    name: "Linux",
+    logo: LinuxIcon
+  },{
+    name: "C++",
+    logo: CPPIcon
+  }
+]
+
+const languages: Tech[]  = [
+{
+    name: "Spanish (native)",
+    logo: SpanishIcon
+  },{
+    name: "English (A2)",
+    logo: EnglishIcon
+  }
+]
 const Tecnologies = [
   { group: 'FrontEnd', techs: frontEnd },
   { group: 'BackEnd', techs: backEnd },
   { group: 'Tools', techs: tools },
   { group: 'Learning', techs: learning },
+  { group: 'Others', techs: others },
+  
 ]
 
 ---
 <div>
   {
     Tecnologies.map(({ group, techs }) => (
-      <article class="w-full md:w-1/2 md:max-w-lg mb-10">
+      <article class="w-full mb-10">
         <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100 mb-2"
         >
           {group}
         </h3>
-        <div class="grid grid-flow-col gap-x-3">
+        <div class="flex flex-wrap gap-3">
           {
             techs.map((tech) => (
-              <div class="flex flex-col ring-1 p-3 bg-slate-100  dark:bg-gray-900 ">
+              <div class="flex flex-col flex-1 ring-1 p-3 bg-slate-100  dark:bg-gray-900 min-w-[120px]">
                 <tech.logo class="size-20 self-center"/>
                 <h4 class="text-lg text-center">{tech.name}</h4>
               </div>
