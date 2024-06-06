@@ -1,5 +1,4 @@
 images component
-Seo tags meta and twt
-add title atribute to a
 schema.org semrush
+add download cv button
 do readme and readme.es
