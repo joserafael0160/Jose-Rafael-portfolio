@@ -43,6 +43,24 @@ const { description, title } = Astro.props
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="/assets/favicons/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
+  
+  <!-- Open Graph / Facebook tags-->
+    <meta name="og:title" content={title}>
+    <meta name="og:description"
+    content={description}>
+    <meta property="og:image" content="/assets/projects/jose-rafael.webp">
+    <meta property="og:url" content="https://jose-rafael.pages.dev/">
+    <meta property="og:site_name" content={title}>
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="portfolio">
+  <!-- Twitter tags -->
+    <meta name="twitter:title" content={title}>
+    <meta name="twitter:description"
+    content={description}>
+    <meta name="twitter:image" content="/assets/projects/jose-rafael.webp">
+    <meta name="twitter:site" content="https://jose-rafael.pages.dev/">
+    <meta name="twitter:creator" content="@jose_rafael016">
+
     <ViewTransitions />
 	</head>
 	<body class="relative text-black dark:text-white">
