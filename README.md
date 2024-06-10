@@ -52,7 +52,7 @@
 <br>
 
 >If you want to read this readme in **Spanish**
->- [**Spanish README**](https://github.com/joserafael0160/Jose-Rafael-portfolio/blob/main/readme.es.md)
+>- [**Spanish README**](https://github.com/joserafael0160/Jose-Rafael-portfolio/blob/main/README.es.md)
 
 ## 📜 About 
 My personal portfolio, a website where my skills and achievements as a web developer are showcased. Here you will also find a variety of projects that I have created. My portfolio is optimized for all devices, ensuring a smooth user experience on both computers and mobiles. 💜
