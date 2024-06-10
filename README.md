@@ -1,6 +1,6 @@
 <a id="top"></a>
 
-<h1 align="center"><img src="./public/assets/favicons/android-icon-144x144.png" width="30">José Rafael's portfolio</h1>
+<h1 align="center"><img src="./public/assets/favicons/android-icon-144x144.png" width="30"> José Rafael's portfolio</h1>
 
 
 <p align="center">
@@ -61,10 +61,10 @@ My personal portfolio, a website where my skills and achievements as a web devel
 
 ## 👀 Preview
 <h4>In a PC (1920x1080)</h4>
-<img src="./src/assets/images/webp/portfolio-PC.webp" alt="project-screenshot">
+<img src="./src/assets/images/webp/portfolio-PC.webp" alt="Project screenshot with a resolution of 1920x1080">
 
 <h4>In a iPhone SE (375x667)</h4>
-<img src="./src/assets/images/webp/portfolio-iPhone-SE.webp" alt="project-screenshot" width="200">
+<img src="./src/assets/images/webp/portfolio-iPhone-SE.webp" alt="Project screenshot with a resolution of 375x667" width="200">
 
 <p align="right">(<a href="#top">Go Back To Top 🔝</a>)</p>
 
@@ -80,8 +80,8 @@ My personal portfolio, a website where my skills and achievements as a web devel
   
 ## 🧰 Stack
 - [**Astro**](https://astro.build/) - It’s a modern and fast static site generator. It allows you to write modern HTML and render it to static HTML at build time.
-- [**TypeScript**](https://developer.mozilla.org/es/docs/Web/HTML) - It’s a superset of JavaScript that adds static typing and other features to the language. It helps you write safer and more understandable code.
-- [**Tailwind CSS**](https://postcss.org/) - It’s a utility-first CSS framework that allows you to build custom designs quickly.
+- [**TypeScript**](https://www.typescriptlang.org/) - It’s a superset of JavaScript that adds static typing and other features to the language. It helps you write safer and more understandable code.
+- [**Tailwind CSS**](https://tailwindcss.com/) - It’s a utility-first CSS framework that allows you to build custom designs quickly.
 - [**ESLint**](https://eslint.org/) - It’s an open-source tool that helps you find and fix problems with your JavaScript code.
 
 <p align="right">(<a href="#top">Go Back To Top 🔝</a>)</p>
@@ -138,7 +138,6 @@ pnpm run dev
 | ⚙️    | `dev`     | Starts local dev server.                      |
 | ⚙️    | `build`   | Build your production site to `./dist/`.      |
 | ⚙️    | `preview` | Preview your build locally, before deploying. |
-| ⚙️    | `deploy`  | Deploy your website to github pages.          |
 
 <p align="right">(<a href="#top">Go Back To Top 🔝</a>)</p>
 
