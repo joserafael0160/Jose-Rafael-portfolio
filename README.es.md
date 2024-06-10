@@ -49,7 +49,7 @@
 <br>
 
 >Si quieres leer este readme en **inglés**:
->- [**README en Inglés**](https://github.com/joserafael0160/Jose-Rafael-portfolio/blob/main/readme.es.md)
+>- [**README en Inglés**](https://github.com/joserafael0160/Jose-Rafael-portfolio/blob/main/README.md)
 
 ## 📜 Acerca Del Proyecto
 Mi portafolio personal, un sitio web donde se exhiben mis habilidades y logros como desarrollador web. Aquí también encontrarás una variedad de proyectos que he creado. Mi portafolio está optimizado para todos los dispositivos, asegurando una experiencia de usuario fluida tanto en computadoras como en móviles. 💜
