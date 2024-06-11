@@ -1,4 +1,3 @@
 images component
 schema.org semrush
 add download cv button
-do readme and readme.es
