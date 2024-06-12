@@ -6,6 +6,10 @@ import ViteIcon from "../assets/images/icons/ViteIcon.astro"
 import GitHubIcon from "../assets/images/icons/GitHubIcon.astro"
 import LinkIcon from "../assets/images/icons/LinkIcon.astro"
 import LinkButton from "./LinkButton.astro"
+import { Image } from "astro:assets"
+import jrlinksIMG from "../assets/images/projects/jrlinks.webp"
+import CalculatorIMG from "../assets/images/projects/calculator.webp"
+import AgeCalculatorIMG from "../assets/images/projects/age-calculator.webp"
 
 const TAGS = {
   HTML: {
@@ -36,7 +40,7 @@ const PROJECTS = [
     description: "I have created this page with the intention of having all my links in one place. You can find me on all my platforms here. 💜",
     link: "https://jrlinks.pages.dev/",
     github: "https://github.com/joserafael0160/JRLinks",
-    image: "/assets/projects/jrlinks.webp",
+    image: jrlinksIMG,
     altImage: "JRLinks",
     tags: [TAGS.HTML, TAGS.POSTCSS, TAGS.JAVASCRIPT, TAGS.VITE]
   },{
@@ -44,7 +48,7 @@ const PROJECTS = [
     description: "This web page has been meticulously crafted to serve as a functional online calculator. It’s designed for quick calculations, making it a handy tool for anyone in need of basic mathematical operations. The calculator is easy to use and accessible to all. 💖",
     link: "https://joserafael0160.github.io/Calculator/",
     github: "https://github.com/joserafael0160/Calculator",
-    image: "/assets/projects/calculator.webp",
+    image: CalculatorIMG,
     altImage: "Calculator",
     tags: [TAGS.HTML, TAGS.POSTCSS, TAGS.JAVASCRIPT, TAGS.VITE]
   },{
@@ -52,7 +56,7 @@ const PROJECTS = [
     description: "This project is an Age Calculator that allows users to calculate their age in years, months, and days based on their date of birth and a specific date they choose. When the user inputs their date of birth and the date on which they want to calculate their age, the application calculates the difference in years, months, and days between these two dates.📅🎂",
     link: "https://joserafael0160.github.io/Age-Calculator/",
     github: "https://github.com/joserafael0160/Age-Calculator",
-    image: "/assets/projects/age-calculator.webp",
+    image: AgeCalculatorIMG,
     altImage: "Age-Calculator",
     tags: [TAGS.HTML, TAGS.POSTCSS, TAGS.JAVASCRIPT, TAGS.VITE]
   }
@@ -65,7 +69,7 @@ const PROJECTS = [
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
       <div class="w-full md:w-1/2">
         <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-          <img alt={altImage} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
+          <Image alt={altImage} class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="eager" src={image} />
         </div>
       </div>
 

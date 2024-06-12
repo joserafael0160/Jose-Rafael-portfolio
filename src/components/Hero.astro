@@ -5,14 +5,17 @@ import LinkedInIcon from "../assets/images/icons/LinkedInIcon.astro"
 import MailIcon from "../assets/images/icons/MailIcon.astro"
 import GitHubIcon from "../assets/images/icons/GitHubIcon.astro"
 import CVIcon from "../assets/images/icons/CVIcon.astro"
+import { Image } from "astro:assets"
+import JRIMG from "./../assets/images/webp/JR.webp"
 ---
 
 <div class="max-w-xl">
   <div class="flex gap-4 mb-4">
-    <img
+    <Image
+      src={JRIMG}
       class="rounded-full shadow-lg size-16 object-cover"
-      src="/assets/JR.webp"
       alt="José Rafael"
+      loading="eager"
     />
     <a
       href="https://www.linkedin.com/in/joserafael016"
