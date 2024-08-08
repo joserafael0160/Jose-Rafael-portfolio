@@ -20,6 +20,7 @@ import EnglishIcon from "../assets/images/icons/EnglishIcon.astro"
 import LinuxIcon from "../assets/images/icons/LinuxIcon.astro";
 import CPPIcon from "../assets/images/icons/CPPIcon.astro";
 import TypeScriptIcon from "../assets/images/icons/TypeScriptIcon.astro";
+
 interface Tech {
   name: string;
   logo: any;
@@ -58,7 +59,11 @@ const frontEnd: Tech[] = [
   {
     name: "Astro",
     logo: AstroIcon
-  }
+  },
+  {
+    name: "React",
+    logo: ReactIcon
+  },
 ]
 const backEnd: Tech[]  = [
   {
@@ -91,10 +96,7 @@ const tools: Tech[]  = [
 ]
 
 const learning: Tech[]  = [
-{
-    name: "React",
-    logo: ReactIcon
-  },{
+  {
     name: "MongoDB",
     logo: MongoDBIcon
   },{
