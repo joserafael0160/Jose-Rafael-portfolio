@@ -3,13 +3,16 @@ import HTMLIcon from "../assets/images/icons/HTMLIcon.astro"
 import PostCSSIcon from "../assets/images/icons/PostCSSIcon.astro"
 import JavaScriptIcon from "../assets/images/icons/JavaScriptIcon.astro"
 import ViteIcon from "../assets/images/icons/ViteIcon.astro"
+import ReactIcon from "../assets/images/icons/ReactIcon.astro"
 import GitHubIcon from "../assets/images/icons/GitHubIcon.astro"
 import LinkIcon from "../assets/images/icons/LinkIcon.astro"
 import LinkButton from "./LinkButton.astro"
 import { Image } from "astro:assets"
 import jrlinksIMG from "../assets/images/projects/jrlinks.webp"
 import CalculatorIMG from "../assets/images/projects/calculator.webp"
-import AgeCalculatorIMG from "../assets/images/projects/age-calculator.webp"
+import TicTacToeIMG from "../assets/images/projects/tic-tac-toe.webp"
+import MovieFinderIMG from "../assets/images/projects/movie-finder.webp"
+import ECommerceIMG from "../assets/images/projects/e-commerce.webp"
 
 const TAGS = {
   HTML: {
@@ -31,11 +34,46 @@ const TAGS = {
     name: "Vite",
     class: "bg-blue-900 text-white",
     icon: ViteIcon
-  }
+  },
+  REACT: {
+    name: "React",
+    class: "bg-blue-800 text-white",
+    icon: ReactIcon
+  },
 }
 
 const PROJECTS = [
-{
+  {
+    title: "E-commerce",
+    description: "In this E-commerce, you can explore a wide variety of products, from clothing for men and women to electronic equipment and jewelry. Use our filters by category or minimum price to find what you need. Additionally, in this project, I utilized the following features with the intention of practicing my React skills: I created an interface to display a list of products obtained from a JSON file. It's responsive. I implemented filters so that users can select a specific category or set a price range. I used useContext to manage the global state of the application. Users can add, remove, and modify the quantity of products in the cart, and these changes are automatically synchronized with the product list. To improve usability and convenience, I stored the cart in localStorage, allowing users to resume their selection even after closing the page. 🛒🌟",
+    link: "https://joserafael0160.github.io/E-commerce/",
+    github: "https://github.com/joserafael0160/E-commerce",
+    image: ECommerceIMG,
+    altImage: "E-commerce",
+    tags: [TAGS.POSTCSS, TAGS.REACT, TAGS.VITE]
+
+  },
+  {
+    title: "Movie Finder",
+    description: "With this tool, you can explore and search for your favorite films. Filter by release year and discover new cinematic gems. Enjoy the magic of cinema. In my project, I used the OMDb (Open Movie Database) API to retrieve movie information. Additionally, It's responsive. To improve efficiency and the user experience, I implemented logic to prevent duplicate searches and performed automatic searches while the user types in the search field. I also utilized the “debounce” technique to avoid continuous searches while the user is still typing, which could overload the API or impact application performance. 🎥🍿",
+    link: "https://joserafael0160.github.io/Movie-Finder/",
+    github: "https://github.com/joserafael0160/Movie-Finder",
+    image: MovieFinderIMG,
+    altImage: "Movie Finder",
+    tags: [TAGS.POSTCSS, TAGS.REACT, TAGS.VITE]
+    
+  },
+  {
+    title: "Tic tac toe",
+    description: "Welcome to my Tic Tac Toe web app! I’ve created this classic game to showcase my skills and problem-solving abilities. As for the implementation, I’ve used React to build the user interface. The algorithm for determining if a player has won is essential for the game’s functionality. By checking winning combinations (via an algorithm), we ensure that the game correctly declares the winner. Additionally, I’ve implemented an algorithm to detect ties, preventing the game from continuing indefinitely. If all squares are filled and there’s no winner, a tie is declared. And to add a festive touch, I’ve included a confetti animation at the end of the game. Enjoy playing! 🎮✨",
+    link: "https://joserafael0160.github.io/tic-tac-toe/",
+    github: "https://github.com/joserafael0160/tic-tac-toe",
+    image: TicTacToeIMG,
+    altImage: "Tic tac toe",
+    tags: [TAGS.POSTCSS, TAGS.REACT, TAGS.VITE]
+    
+  },
+  {
     title: "JRLinks",
     description: "I have created this page with the intention of having all my links in one place. You can find me on all my platforms here. 💜",
     link: "https://jrlinks.pages.dev/",
@@ -43,21 +81,14 @@ const PROJECTS = [
     image: jrlinksIMG,
     altImage: "JRLinks",
     tags: [TAGS.HTML, TAGS.POSTCSS, TAGS.JAVASCRIPT, TAGS.VITE]
-  },{
+  },
+  {
     title: "Calculator",
     description: "This web page has been meticulously crafted to serve as a functional online calculator. It’s designed for quick calculations, making it a handy tool for anyone in need of basic mathematical operations. The calculator is easy to use and accessible to all. 💖",
     link: "https://joserafael0160.github.io/Calculator/",
     github: "https://github.com/joserafael0160/Calculator",
     image: CalculatorIMG,
     altImage: "Calculator",
-    tags: [TAGS.HTML, TAGS.POSTCSS, TAGS.JAVASCRIPT, TAGS.VITE]
-  },{
-    title: "Age Calculator",
-    description: "This project is an Age Calculator that allows users to calculate their age in years, months, and days based on their date of birth and a specific date they choose. When the user inputs their date of birth and the date on which they want to calculate their age, the application calculates the difference in years, months, and days between these two dates.📅🎂",
-    link: "https://joserafael0160.github.io/Age-Calculator/",
-    github: "https://github.com/joserafael0160/Age-Calculator",
-    image: AgeCalculatorIMG,
-    altImage: "Age-Calculator",
     tags: [TAGS.HTML, TAGS.POSTCSS, TAGS.JAVASCRIPT, TAGS.VITE]
   }
 ]
